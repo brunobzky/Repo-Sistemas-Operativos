@@ -1,0 +1,86 @@
+Ejemplos:
+
+>>>>> sed 's/palabra1/palabra2/' nombreArchivo.txt
+Sirve para sustituir la palabra1 por la palabra2 en el nombreArchivo.txt 
+pero no lo guarda, solo lo muestra.
+
+--
+brunobzky@DebianBrunobzky:~/Descargas$ sed 's/a/o/' hola.txt 
+Quosar Rig Veda dream of the mind's eye made in the interioro of collapsing 
+stors the oky calls to us hydrogen atoms. The only home we've ever known something incredible is waiting to be known citizens of distant epochs vastness is bearable only through love a still more bastardo dawn awaits are creatures of the cosmos. Two ghostly white figures in coveralls and helmets are soflty dancing bits of moving fluff Cambrian explosion rich in heavy atoms shores of the cosmic
+A still more bostardo dawn awaito the sky calls to us not a sunrise but a galaxyrise with pretty stories for which there's little good evidence Jean-François Champollion white dwarf? Paroxysm of global death made in the interiors of collapsing stars the carbon in our apple pies a very small stage in a vast cosmic arena descended from astronomers vanquish the impossible. Concept of the number one colonies courage of our questions preserve and cherish that pale blue dot hundreds of thousands Drake Equation.
+
+
+>>>>> sed -i 's/palabra1/palabra2/' nombreArchivo.txt 
+Funciona para lo mismo, excepto que ahora sí salva los cambios.
+
+--
+brunobzky@DebianBrunobzky:~/Descargas$ sed -i 's/Rig/HolaYoSoySustituto/' hola.txt 
+Quasar HolaYoSoySustituto Veda dream of the mind's eye made in the interioro of$
+stars the oky calls to us hydrogen atoms. The only...
+
+>>>>> sed 's/palabra1/palabra2/3' nombreArchivo.txt
+Al agregar un número, lo que hace es buscar cada tercer palabra 
+si existe la palabra1, en caso de ser así, la sustituye por palabra2, 
+pero si palabra1 existe en otro lugar distinto del multiplo del número 
+indicado, esta no se cambiará.
+
+--
+brunobzky@DebianBrunobzky:~/Descargas$ sed -i 's/s/t/2' hola.txt 
+Quasar HolaYoSoySuttituto Veda dream of the mind's eye made in the interioro of$
+start the ok...
+
+>>>>>time $programa
+Muestra el tiempo de ejecución que toma a un programa en el equipo.
+
+--
+brunobzky@DebianBrunobzky:~$ time date
+mar may 14 12:06:55 CDT 2019
+
+real	0m0.003s
+user	0m0.000s
+sys	0m0.000s
+
+
+>>>>> tar cvf dir.tar.gz directorio/
+Sirve para comprimir archivos ubicados en el directorio creando el archivo 
+dir.tar.gz
+
+
+--
+brunobzky@DebianBrunobzky:~/Descargas$ tar cvf comprimido.tar.gz comprimir/
+comprimir/
+comprimir/arch7
+comprimir/arch1
+comprimir/arch10
+comprimir/arch2
+comprimir/arch9
+comprimir/arch6
+comprimir/arch8
+comprimir/arch5
+comprimir/arch3
+comprimir/arch4
+
+>>>>> tar xvf dir.tar.gz
+Sirve para extraer archivos ubicados en dir.tar.gz
+
+--
+brunobzky@DebianBrunobzky:~/Descargas$ tar xvf comprimido.tar.gz 
+comprimir/
+comprimir/arch7
+comprimir/arch1
+comprimir/arch10
+comprimir/arch2
+comprimir/arch9
+comprimir/arch6
+comprimir/arch8
+comprimir/arch5
+comprimir/arch3
+comprimir/arch4
+
+>>>>>du -sh directorio/
+Sirve para ver el tamaño de una carpeta
+
+--brunobzky@DebianBrunobzky:~/Descargas$ du -sh comprimir
+4.0K	comprimir
+
